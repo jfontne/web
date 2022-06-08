@@ -1,0 +1,769 @@
+/* Importem les font de la carpeta fonts amb les seves respectives amplades*/
+@font-face {
+    font-family: 'Montserrat';
+    font-style: regular;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: Bold;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: Black;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+  }
+
+
+
+body{
+    font-family: Montserrat;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF7E8;
+    display:flex;
+    flex-direction: column;
+}
+
+main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.mainII{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+}
+
+header{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    z-index: 10; 
+    width: 100%; 
+    height: 100px;
+    background-color: white;
+    align-items: center;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+.headerEsquerra{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+}
+
+.headerEsquerra img{
+    max-width: 200px;
+}
+
+.menu{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+}
+.menu li{
+    display: inline;
+    padding-right: 3px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.menu .actiu{
+    text-decoration-line:underline;
+    text-decoration-style: dashed;
+    text-decoration-color: darkgrey;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+
+    
+}
+
+.menu a{
+    color: #2A2A2A;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: #79BAAB;
+}
+
+
+
+footer {
+    clear: both;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    }
+
+
+    footer hr{
+        width: 100%;
+        text-align: center;
+    }
+       
+    footer ul{
+        padding: 0;
+    }
+    
+    footer ul li{
+        display: inline;
+        padding-right: 3px;
+    }
+
+    footer ul li img{
+        opacity: 0.7;
+    }
+    footer a:hover{
+        color:#79BAAB;
+    }
+
+    .f1c1{
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .f1c2{
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+
+    }
+    
+    .f2c1c2{
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .f3c1{
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .f3c2{
+        flex: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .linkPeu{
+        color: white;
+        text-decoration: none;
+    }
+
+ /*----------------------INDEX----------------------------------*/
+
+ .contenidorProductes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.imgmeal{
+    max-width: 100%;
+} 
+ 
+ /*----------------------NOU-- RECIPES--------------------------*/
+ .recipes{
+    margin-top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.contenidorRecipes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.recipes .esquerra{
+    display: none;
+    grid-row: 1;
+    grid-column: 1;
+    background-color: white;
+}
+
+
+.recipes .dreta{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.formEsquerra{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: auto;
+}
+
+.formEsquerra .searchLateral{
+    width: 90%;
+    grid-row: auto;
+    grid-column: 1/3;
+    
+}
+
+.paginacio{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.paginacio a{
+    text-decoration: none;
+    color: #79BAAB;
+}
+.paginacio a:hover{
+    color: #C5E1DB;
+}
+
+/*-----------------------SHOP-------------------------------------*/
+.contenidorShop{
+    margin-top: 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+/*----------------------VIDEOS-------------------------------------*/
+
+.contenidorVideo{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 10px;
+    padding-left: 0;
+    margin-left: 0;
+}
+.caixaVideo{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixaVideo h2{
+    padding: 10px;
+}
+
+.caixaVideo p{
+    padding: 10px;
+}
+.video{
+    width: 100%;
+    height: 250px;
+}
+
+/*-----------------------------------------------------------------*/ 
+
+
+
+.cap{
+    margin-top: 90px;
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    width: calc(100% - 40px);
+    background-image: url("../img/knife-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tprincipal{
+    text-align: center;
+    text-transform: uppercase;
+    width: 400px;
+
+}
+
+.search{
+    background-image: url("../img/icons/search.svg");
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 50%;
+    padding-left: 30px;
+    border-radius: 2px;
+    border-color: aqua;
+}
+
+h1,h2,h3,h4{
+    text-transform: uppercase;
+}
+
+
+
+.titol{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+   
+}
+
+.titol::before{
+    width:20%;
+    margin-top:inherit;
+    content: "";
+    height: 2px;
+    background-color: black;
+    margin-right: 20px;
+}
+
+.titol::after{
+    width: 20%;
+    margin-top: inherit;
+    content: "";
+    height: 2px;
+    background-color: black;
+    margin-left: 20px;
+}
+
+.shop{
+    z-index: 4;
+    background-image: url("../img/shop-bg.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    text-align: center;
+}
+
+.shopmsg{
+    background-color: white;
+    border-left-color: black;
+    border-radius: 3px;
+    width: 75%;
+    padding: 1%;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(54, 54, 54, 0.2);
+    border-color: darkgray;
+    border-width: 1px;
+    border-style: solid;
+}
+.shopmsg a{
+    color: red;
+}
+
+.pick{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+}
+
+.pick h1{
+    text-transform: none;
+    padding-top: 0;
+}
+
+.pickCom{
+    padding-bottom: 0;
+    text-transform: uppercase;
+}
+
+.esquerra{
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 10px;
+}
+
+.dreta{
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.dreta img{
+    width: 100%;
+
+}
+
+.pickBoto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    border-color: darkcyan;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    color: darkcyan;
+
+}
+
+.newsletter{
+    width: calc(100% - 40px);
+    position: relative;
+    background-color: #79BAAB;
+    height: 30vh;
+    padding: 20px;
+}
+
+.suscribe{
+    background-color: #DC4A23;
+    height: 30px;
+    max-width: 250px;
+    border-style: none;
+    color:white;
+    border-radius: 5px;
+}
+
+.emailSuscribe{
+    height: 30px;
+    width: 30%;
+}
+
+.imgbg{
+    opacity: 0.2;
+    height: 30vh;
+    background-image: url(../img/doodle.png);
+    background-repeat: repeat;
+}
+
+.imgtext{
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    top:5px;
+    width: 90%;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------ORDINADOR------------------------------*/
+/*--------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+
+    main{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mainII{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 90px;
+    }
+
+    header{
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        z-index: 10; 
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        align-items: center;
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    .headerEsquerra{
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+    }
+    
+    .headerEsquerra img{
+        max-width: 200px;
+    }
+    
+    
+    .menu{
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+        flex-wrap: nowrap;
+    }
+    .menu li{
+        display: inline;
+        padding-right: 3px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .menu a{
+        color: #2A2A2A;
+    }
+    
+    
+    footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*----------------------INDEX----------------------------------*/
+
+ .contenidorProductes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+ }
+    .pick{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+    }
+
+    .esquerra{
+        grid-column: 1;
+        grid-row: 1;
+        padding-right: 10px;
+    }
+    
+    .dreta{
+        grid-column: 2;
+        grid-row: 1/3;
+    
+    }
+    
+    .dreta img{
+        width: 100%;
+    
+    }
+
+    .esquerraBoto{
+        grid-column: 1;
+        grid-row: 2;  
+    }
+
+    .pickBoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 70px;
+        background-color: white;
+        border-color: darkcyan;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 2px;
+        color: darkcyan;
+    
+    }
+    
+
+    
+    /*-------------------RECIPES----------------------------------------------------------*/
+
+    .recipes{
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+
+    .contenidorRecipes{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+        
+    .recipes .esquerra{
+        display: block;
+        grid-row: 1;
+        grid-column: 1;
+        background-color: white;
+    }
+    
+    
+    .recipes .dreta{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    
+    .formEsquerra{
+        grid-template-columns: 15% 85%;
+        grid-template-rows: auto;
+    }
+    
+    .formEsquerra .searchLateral{
+        grid-row: auto;
+        grid-column: 1/3;
+        
+    }
+    
+    /*-----------------SHOP--------------------------------------------------------------*/
+    
+    .contenidorShop{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+
+
+/*-----------------------footer-------------------------------------------------------*/
+
+    footer .contingut{    
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 0.5fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+    
+        .f1c1{
+            grid-column: 1;
+            grid-row: 1;
+            text-align: left;
+    
+        }
+        .f1c2{
+            grid-column: 2;
+            grid-row: 1;
+            text-align: right;
+        }
+        
+        .f2c1c2{
+            grid-column: 1/3;
+            grid-row: 2;
+        }
+        .f3c1{
+            grid-column: 1;
+            grid-row: 3;
+            text-align: left;
+        }
+        .f3c2{
+            grid-column: 2;
+            grid-row: 3;
+            text-align: right;
+        }
+    
+        footer hr{
+            width: 100%;
+        }
+           
+        footer ul{
+            content: "";
+        }
+        
+        footer ul li{
+            display: inline;
+            padding-right: 3px;
+        }
+
+        .linkFooter:hover{
+            opacity: 0.7;
+            background-color: transparent;
+        }
+        
+        /*----------------------VIDEOS-------------------------------------*/
+
+        .contenidorVideo{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .caixaVideo{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .caixaVideo h2{
+            padding: 10px;
+        }
+
+        .caixaVideo p{
+            padding: 10px;
+        }
+
+
+        /*-----------------------------------------------------------------*/
+       
+    
+}
+    
+
+    
